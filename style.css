@@ -1,0 +1,602 @@
+
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+/* @font-face {
+    font-family: 'Tilt Neon';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/tiltneon/v10/E21L_d7gguXdwD9LEFY2WCeElCNtd-eBqpHp1TzrkJSmwpj5ndxquUK0UOeVJw.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+} */
+                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url(Images/7529031.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Tilt Neon';
+    
+}
+
+.container {
+    width: 100%;
+}
+
+.sub-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.header h1 {
+
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%), hsl(229, 75%, 36%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    /* background: -webkit-linear-gradient(45deg, #1e009f, #0022d2, #ffb800, #d89b00, #000000 80%); */
+    /* background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%) 80%); */
+    color: #fff;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    animation: animate 0.3s linear;
+}
+
+.home-hero {
+    margin-top: 30px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 520px;
+}
+
+.greetings {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.greetings h1 {
+    font-size: 62px;
+    font-weight: 600;
+}
+
+
+.greetings h2 {
+    font-size: 62px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%), hsl(229, 75%, 36%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.about-hero {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.about {
+    background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    /* width: 100%; */
+    height: 680px;
+    /* border-radius: 20px; */
+    padding: 20px;
+    box-shadow: 0 1px 4px 0px rgba(255, 255, 255, 0.1);
+}
+
+.about-glow {
+    position: relative;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    height: 640px;
+    padding: 5px;
+    animation: grad-animate 1.5s linear infinite;
+    animation-delay: 1.5s;
+}
+
+
+.about-glow span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.about-glow span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+.about-inner {
+    position: absolute;
+    inset: 1;
+    right: 1;
+    bottom: 1;
+    background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    height: 630px;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* border-radius: 10px; */
+}
+
+.about-inner img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    gap: 30px;
+    color: #fff;
+}
+
+.stats-de {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.stats-details {
+    padding: 5px;
+}
+
+.stats-details h3{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.stats-details h2 {
+    font-size: 25px;
+}
+
+.divider {
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    height: 100%;
+    width: 3px;
+}
+
+.cseparator {
+    
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    height: 2px;
+    width: 80%;
+    opacity: .7;
+}
+
+.stats-bio {
+    width: 50%;
+}
+
+.stats-bio p {
+    overflow-wrap: break-word;
+    
+}
+
+
+.skills-hero {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.skills {
+    background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    /* width: 100%; */
+    height: 580px;
+    /* border-radius: 20px; */
+    padding: 20px;
+    box-shadow: 0 1px 4px 0px rgba(255, 255, 255, 0.1);
+}
+
+.skills-glow {
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    height: 540px;
+    padding: 5px;
+    animation: grad-animate 1.5s linear infinite;
+    animation-delay: 1.5s;
+    /* border-radius: 15px; */
+}
+
+.skills-inner {
+    background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    /* border-radius: 10px; */
+}
+
+.skills-inner h1 {
+    font-size: 54px;
+
+}
+
+.skills-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    gap: 30px;
+    color: #fff;
+}
+
+.skills-stats-de {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 5px;
+}
+
+.skills-stats-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skilldetails {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skilldetails h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.skilldetails h4 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    padding: 5px 8px;
+    background: hsl(218,81%,18%);
+    
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar .glow{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+}
+
+.progress-bar .glow span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.progress-bar .glow span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+.progress-bar .glowcss{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+}
+
+.progress-bar .glowcss span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.progress-bar .glowcss span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+.progress-bar .glowui{
+    position: relative;
+    width: 30%;
+    height: 15px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+}
+
+.progress-bar .glowui span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.progress-bar .glowui span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+.progress-bar .glowp{
+    position: relative;
+    width: 70%;
+    height: 15px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+}
+
+.progress-bar .glowp span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.progress-bar .glowp span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+.progress-bar .glowjs{
+    position: relative;
+    width: 50%;
+    height: 15px;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+}
+
+.progress-bar .glowjs span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.progress-bar .glowjs span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate {
+    0% {
+        text-underline-offset: 0px;
+    }
+
+    100% {
+        text-underline-offset: 10px;
+    }
+    
+}
+
+@keyframes grad-animate {
+    0% {
+        background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+
+    25% {
+        background: -webkit-linear-gradient(195deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+    50% {
+        background: -webkit-linear-gradient(205deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+    75% {
+        background: -webkit-linear-gradient(-195deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+
+
+    100% {
+        background: -webkit-linear-gradient(-75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+    
+}
+
+/* @keyframes row {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+} */
+
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+        
+    }
+
+    100%{
+        filter: hue-rotate(-360deg);
+    }
+    
+}
+
+
+@media (max-width: 769px) {
+    nav {
+        display: none;
+    }
+    
+    .about {
+        height: 860px;
+    }
+
+    .about-glow {
+        width: 100%;
+        height: 820px;
+    }
+
+    .about-inner {
+        width: 96%;
+        height: 810px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats-de {
+        width: 100%;
+    }
+
+    .stats-bio {
+        width: 100%;
+    }
+
+    .divider {
+        height: 3px;
+        width: 100%;
+    }
+
+    /* Skills */
+
+    .skills {
+        height: 940px;
+    }
+
+    .skills-glow {
+        width: 100%;
+        height: 900px;
+    }
+
+    .skills-inner {
+        height: 890px;
+    }
+
+    .skills-stats {
+        flex-direction: column;
+    }
+
+    .skills-stats-de {
+        width: 100%;
+    }
+
+    .skills-stats-bio {
+        width: 100%;
+    }
+
+}
