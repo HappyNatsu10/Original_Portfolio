@@ -19,7 +19,10 @@
     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 } */
                                                                                                                                                                                                                                                                                                                                                                                             
-
+:root {
+    --main-color: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%), hsl(229, 75%, 36%));
+    --bg-color: hsl(221,75%,16%);
+}
 
 * {
     margin: 0;
@@ -32,6 +35,7 @@ body {
     background-attachment: fixed;
     background-image: url(Images/7529031.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     font-family: 'Tilt Neon';
     
@@ -84,7 +88,7 @@ nav a:hover {
 }
 
 .home-hero {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .home {
@@ -106,17 +110,47 @@ nav a:hover {
 }
 
 .greetings h1 {
-    font-size: 62px;
+    font-size: 60px;
     font-weight: 600;
 }
 
 
 .greetings h2 {
-    font-size: 62px;
+    font-size: 60px;
     background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%), hsl(229, 75%, 36%));
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.home p {
+    font-size: 19px;
+}
+
+.typing-text {
+    font-weight: 600;
+    /* min-width: 280px; */
+}
+
+.typing-text span {
+    position: relative;
+}
+.typing-text span::before {
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%), hsl(229, 75%, 36%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    content: 'Human';
+    animation: words 20s infinite;
+}
+/* .typing-text span::after {
+    content: '';
+    background: linear-gradient(90deg,hsl(220,78%,14%),hsl(221,76%,16%), hsl(221,75%,16%), hsl(220,78%,18%));
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-right: 3px solid red; 
+    right: -8;
+    animation: cursor 0.6s infinite, typing 20 steps(14) infinite;
+} */
 
 
 .about-hero {
@@ -161,12 +195,10 @@ nav a:hover {
 
 .about-inner {
     position: absolute;
-    inset: 1;
-    right: 1;
-    bottom: 1;
     background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
     height: 630px;
-    width: 99%;
+    inset: 5px 5px 5px 5px;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,7 +274,7 @@ nav a:hover {
 
 .skills-hero {
     margin-top: 150px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 .skills {
@@ -456,6 +488,94 @@ nav a:hover {
 }
 
 
+.portfolio-hero {
+    margin-top: 150px;
+    margin-bottom: 300px;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    color: #fff;
+    padding: 5px;
+}
+
+.portfolio h2 {
+    font-size: 43px;
+    margin-bottom: 30px;
+}
+
+.portfolio a {
+    position: relative;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    transition: 0.3s ease-in-out;
+}
+
+/* .portfolio button a {
+    position: relative;
+    width: inherit;
+    height: inherit;
+} */
+
+.portfolio a:hover {
+    transform: scale(1.1);
+    font-size: 16px;
+}
+
+.portfolio .glowport span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    z-index: 2;
+    opacity: 0.1;
+    
+}
+/* .portfolio .glowport span:hover {
+    filter: blur(7px);
+    z-index: 1;
+    opacity: 1;
+} */
+
+.portfolio .glowport span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    z-index: 2;
+    opacity: 0.1;
+}
+
+/* .portfolio .glowport span:nth-child(2):hover {
+    filter: blur(14px);
+    z-index: 1;
+    opacity: 1;
+} */
+
+.portfolio .glowport h3 {
+    position: absolute;
+    background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    height: 35px;
+    width: 145px;
+    inset: 2.2px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
 
 
 
@@ -469,8 +589,23 @@ nav a:hover {
 
 
 
-
-
+@keyframes words {
+    0%, 20% {
+        content: 'Recuiters';
+    }
+    21%, 40% {
+        content: 'Employers';
+    }
+    41%, 60% {
+        content: 'Guests';
+    }
+    61%, 80% {
+        content: 'Humans';
+    }
+    81%, 100% {
+        content: 'Aliens';
+    }
+}
 
 
 
@@ -535,8 +670,51 @@ nav a:hover {
     
 }
 
+@media (max-width: 1024px) {
+    .home-hero {
+        margin-top: 10px;
+    }
+
+    .home {
+        height: 450px;
+    }
+
+    .greetings h1 {
+        font-size: 55px;
+    }
+
+    .greetings h2 {
+        font-size: 55px;
+    }
+
+    .about-inner {
+        width: 98.6%;
+    }
+}
 
 @media (max-width: 769px) {
+
+
+    .home-hero {
+        margin-top: 60px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .greetings h1 {
+        font-size: 48px;
+    }
+
+    .greetings h2 {
+        font-size: 48px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
     nav {
         display: none;
     }
@@ -551,7 +729,7 @@ nav a:hover {
     }
 
     .about-inner {
-        width: 96%;
+        width: 98.5%;
         height: 810px;
     }
 
@@ -599,4 +777,11 @@ nav a:hover {
         width: 100%;
     }
 
+}
+
+
+@media (max-width: 500px) {
+    .about-inner {
+        width: 96.5%;
+    }
 }
