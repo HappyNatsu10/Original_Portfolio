@@ -1,0 +1,372 @@
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: url(Images/4161644.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Tilt Neon';
+    animation: change 8s ease-in-out;
+    
+}
+
+
+.container {
+    width: 100%;
+}
+
+.sub-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.header h1 {
+
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(45,97%,86%), hsl(32,47%,48%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    /* background: -webkit-linear-gradient(45deg, #1e009f, #0022d2, #ffb800, #d89b00, #000000 80%); */
+    /* background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%) 80%); */
+    color: #fff;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    animation: animate 0.3s linear;
+}
+
+
+.project-hero {
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    background: hsla(192, 14%, 7%, 0.541);
+    padding: 20px;
+    border-radius: 10px;
+    animation: projectchange 8s ease-in-out;
+    font-family: 'Tilt Neon';
+}
+
+.project-frame {
+    position: relative;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(45,97%,86%), hsl(32,47%,48%));
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 303px;
+    transition: 0.3s ease-in-out;
+    animation: proframechange 8.7s ease-in-out;
+}
+
+.project-frame:hover {
+    transform: scale(1.1);
+}
+
+
+/* .project-frame .item-frame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    border-radius: 15px;
+    
+} */
+
+.project-frame span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(7px);
+}
+
+.project-frame span:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(14px);
+}
+
+
+    
+.item {
+    position: absolute;
+    background: hsl(192,14%,7%);
+    border-radius: 10px;
+    padding: 10px;
+    width: 96.3%;
+    animation: itemchange 8.9s cubic-bezier(0.65, 0.05, 0.36, 1);
+    
+}
+
+
+.item-frame .item img {
+    width: 100%;
+    height: 20%;
+}
+
+.item-details {
+    color: #fff;
+    word-wrap: break-word;
+}
+
+
+.item-details h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes change {
+   0% {
+        background: url(Images/7529031.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+
+    90% {
+        background: url(Images/7529031.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+   100% {
+        background: url(Images/4161644.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@keyframes projectchange {
+    0% {
+        background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    }
+    90% {
+        background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    }
+
+    100% {
+        background: hsl(192,14%,7%);
+
+    }
+}
+
+@keyframes proframechange {
+    0%  {
+        background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+    90% {
+        background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(29,28%,46%), hsl(29, 56%, 28%),hsl(29,28%,46%), hsl(29, 78%, 79%), hsl(30,80%,75%));
+    }
+
+    100% {
+        background: -webkit-linear-gradient(75deg,hsl(30,80%,75%), hsl(29, 78%, 79%), hsl(45,97%,86%), hsl(32,47%,48%));
+
+    }
+    
+}
+
+@keyframes itemchange {
+    0% {
+        background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    }
+    90% {
+        background: linear-gradient(120deg, hsl(221,75%,13%), hsl(219,81%,18%));
+    }
+
+    100% {
+        background: hsla(192, 14%, 7%, 0.541);
+    }
+}
+
+
+@keyframes animate {
+    0% {
+        text-underline-offset: 0px;
+    }
+
+    100% {
+        text-underline-offset: 10px;
+    }
+    
+}
+
+
+@media (max-width: 1151px) {
+    .project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .project-frame {
+        height: 332px;
+    }
+    
+    .item {
+        width: 97%;
+    }
+
+}
+
+@media (max-width: 1125px) {
+    .project-frame {
+        height: 365px;
+    }
+
+    .item {
+        width: 97.5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-frame {
+        height: 331px;
+    }
+
+    .item {
+        width: 97%;
+    }
+}
+
+
+@media (max-width: 769px) {
+
+
+    .home-hero {
+        margin-top: 60px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .greetings h1 {
+        font-size: 48px;
+    }
+
+    .greetings h2 {
+        font-size: 48px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .project-frame {
+        height: 319px;
+    }
+
+    .item {
+        width: 97%;
+    }
+}
+
+@media (max-width: 460px) {
+    .project {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+    
+    .project-frame {
+        height: 322.8px;
+    }
+
+    .item {
+        width: 97%;
+    }
+}
+
+@media (width: 414px) {
+    .project-frame {
+        height: 337px;
+    }
+}
